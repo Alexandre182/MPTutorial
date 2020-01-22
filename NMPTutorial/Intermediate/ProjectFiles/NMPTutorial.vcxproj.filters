@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\NMPTutorial.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DEA7FE61-61FF-4FC3-AFCD-7CD31FA6757C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NMPTutorial.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\NMPTutorialEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{25F87F35-79F2-47CA-900F-C798F9BDF1F5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\NMPTutorial">
+      <UniqueIdentifier>{20633D14-0AEC-4B1E-BAB3-CCB869D9962C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NMPTutorial\BatteryPickup.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NMPTutorial\BatteryPickup.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\NMPTutorial\NMPTutorial.Build.cs">
+      <Filter>Source\NMPTutorial</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\NMPTutorial\NMPTutorial.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NMPTutorial\NMPTutorial.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NMPTutorial\NMPTutorialCharacter.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NMPTutorial\NMPTutorialCharacter.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NMPTutorial\NMPTutorialGameMode.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NMPTutorial\NMPTutorialGameMode.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NMPTutorial\Pickup.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NMPTutorial\Pickup.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NMPTutorial\SpawnVolume.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NMPTutorial\SpawnVolume.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.h
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\SpawnVolume.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source\NMPTutorial\Pickup.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\Pickup.generated.h

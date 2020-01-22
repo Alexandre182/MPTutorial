@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "NMPTutorial",
+			"Path": "C:\\Projetos\\Unreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorial.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "NMPTutorialEditor",
+			"Path": "C:\\Projetos\\Unreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorialEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

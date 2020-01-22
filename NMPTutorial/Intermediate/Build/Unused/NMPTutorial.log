@@ -1,0 +1,6 @@
+﻿  Cleaning NMPTutorialEditor and UnrealHeaderTool binaries...
+  Creating makefile for NMPTutorialEditor (no existing makefile)
+  Parsing headers for NMPTutorialEditor
+    Running UnrealHeaderTool "C:\Projetos\Unreal\MPTutorial\NMPTutorial\NMPTutorial.uproject" "C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\NMPTutorialEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+C:/Projetos/Unreal/MPTutorial/NMPTutorial/Source/NMPTutorial/Pickup.h(56): error : Unknown function specifier 'Unreilable'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(49,5): error MSB3073: O comando ""C:\Program Files\Epic Games\UE_4.24\Engine\Build\BatchFiles\Rebuild.bat" NMPTutorialEditor Win64 Development -Project="C:\Projetos\Unreal\MPTutorial\NMPTutorial\NMPTutorial.uproject" -WaitMutex -FromMsBuild" foi encerrado com o código -1.
