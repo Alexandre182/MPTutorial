@@ -1,10 +1,10 @@
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorialCharacter.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorialCharacter.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\NMPTutorialCharacter.generated.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\NMPTutorialCharacter.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayFunctionLibrary.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayTypes.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\HeadMountedDisplayTypes.generated.h
@@ -38,7 +38,7 @@ C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\Net/UnrealNetwork.h
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source\NMPTutorial\Pickup.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\Pickup.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\Pickup.generated.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\Pickup.generated.h

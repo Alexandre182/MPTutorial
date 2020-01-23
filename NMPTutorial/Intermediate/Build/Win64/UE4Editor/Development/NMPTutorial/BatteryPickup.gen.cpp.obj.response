@@ -228,8 +228,8 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I Runtime\AudioMixerCore\Public
-/I C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial
-/I C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source
+/I C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial
+/I C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I ThirdParty\PhysX3\PxShared\include
@@ -261,12 +261,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\BatteryPickup.gen.cpp"
-/FI"C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h"
-/Fo"C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\BatteryPickup.gen.cpp.obj"
+/FI"C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\BatteryPickup.gen.cpp"
+/FI"C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h"
+/Fo"C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\BatteryPickup.gen.cpp.obj"
 /TP
 /GR-
 /W4

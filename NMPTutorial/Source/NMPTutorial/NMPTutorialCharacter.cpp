@@ -62,6 +62,8 @@ void ANMPTutorialCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(ANMPTutorialCharacter, CollectionSphereRadius);
+	DOREPLIFETIME(ANMPTutorialCharacter, InitialPower);
+	DOREPLIFETIME(ANMPTutorialCharacter, CurrentPower);
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -130,6 +132,25 @@ void ANMPTutorialCharacter::ServerCollectPickups_Implementation()
 	}
 }
 
+
+float ANMPTutorialCharacter::GetInitialPower()
+{
+	return InitialPower;
+}
+
+float ANMPTutorialCharacter::GetCurrentPower()
+{
+	return CurrentPower;
+}
+
+void ANMPTutorialCharacter::UpdatePower(float DeltaPower)
+{
+	if (Role == ROLE_Authority)
+	{
+		// increase (or decrease) current power
+		CurrentPower += DeltaPower;
+	}
+}
 
 void ANMPTutorialCharacter::OnResetVR()
 {

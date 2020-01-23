@@ -37,6 +37,21 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	// Access to the character's starting power
+	UFUNCTION(BlueprintPure, Category = "Power")
+	float GetInitialPower();
+
+	UFUNCTION(BlueprintPure, Category = "Power")
+	float GetCurrentPower();
+
+	/**
+	* This updates the character's power level
+	* @Param DeltaPower - This is the amount to change power by, can be + or -
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "Power")
+	void UpdatePower(float DeltaPower);
+
+
 protected:
 
 	/** Resets HMD orientation in VR. */
