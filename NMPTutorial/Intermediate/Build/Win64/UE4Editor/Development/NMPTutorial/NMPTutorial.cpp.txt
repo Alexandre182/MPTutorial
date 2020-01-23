@@ -1,2 +1,2 @@
-C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
-C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorial.h
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
+C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorial.h
