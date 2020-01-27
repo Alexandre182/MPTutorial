@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Projetos\\Unreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorial\\NMPTutorial.Build.cs",
-		"C:\\Projetos\\Unreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorial.Target.cs",
-		"C:\\Projetos\\Unreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorialEditor.Target.cs"
+		"C:\\Projetos\\Unreal\\MPTutorialUnreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorial\\NMPTutorial.Build.cs",
+		"C:\\Projetos\\Unreal\\MPTutorialUnreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorial.Target.cs",
+		"C:\\Projetos\\Unreal\\MPTutorialUnreal\\MPTutorial\\NMPTutorial\\Source\\NMPTutorialEditor.Target.cs"
 	],
 	"EngineVersion": "4.24.1"
 }

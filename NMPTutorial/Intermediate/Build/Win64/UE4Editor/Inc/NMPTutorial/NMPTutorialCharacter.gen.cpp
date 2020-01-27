@@ -20,12 +20,19 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_CollectPickups();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_GetCurrentPower();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_GetInitialPower();
+	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower();
+	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_ServerCollectPickups();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_UpdatePower();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
+	static FName NAME_ANMPTutorialCharacter_PowerChangeEffect = FName(TEXT("PowerChangeEffect"));
+	void ANMPTutorialCharacter::PowerChangeEffect()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ANMPTutorialCharacter_PowerChangeEffect),NULL);
+	}
 	static FName NAME_ANMPTutorialCharacter_ServerCollectPickups = FName(TEXT("ServerCollectPickups"));
 	void ANMPTutorialCharacter::ServerCollectPickups()
 	{
@@ -38,6 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 			{ "CollectPickups", &ANMPTutorialCharacter::execCollectPickups },
 			{ "GetCurrentPower", &ANMPTutorialCharacter::execGetCurrentPower },
 			{ "GetInitialPower", &ANMPTutorialCharacter::execGetInitialPower },
+			{ "OnRep_CurrentPower", &ANMPTutorialCharacter::execOnRep_CurrentPower },
 			{ "ServerCollectPickups", &ANMPTutorialCharacter::execServerCollectPickups },
 			{ "UpdatePower", &ANMPTutorialCharacter::execUpdatePower },
 		};
@@ -136,6 +144,55 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// Power level is updated on clients\n" },
+		{ "ModuleRelativePath", "NMPTutorialCharacter.h" },
+		{ "ToolTip", "Power level is updated on clients" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANMPTutorialCharacter, nullptr, "OnRep_CurrentPower", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Power" },
+		{ "Comment", "// Update character visuals based on current power level\n" },
+		{ "ModuleRelativePath", "NMPTutorialCharacter.h" },
+		{ "ToolTip", "Update character visuals based on current power level" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANMPTutorialCharacter, nullptr, "PowerChangeEffect", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ANMPTutorialCharacter_ServerCollectPickups_Statics
 	{
 #if WITH_METADATA
@@ -215,6 +272,14 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CollectionSphereRadius;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpeedFactor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpeedFactor;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitialPower_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InitialPower;
@@ -250,6 +315,8 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_CollectPickups, "CollectPickups" }, // 3825582223
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_GetCurrentPower, "GetCurrentPower" }, // 3536522533
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_GetInitialPower, "GetInitialPower" }, // 3986854378
+		{ &Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower, "OnRep_CurrentPower" }, // 666358721
+		{ &Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect, "PowerChangeEffect" }, // 4015322028
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_ServerCollectPickups, "ServerCollectPickups" }, // 3381308434
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_UpdatePower, "UpdatePower" }, // 13238558
 	};
@@ -268,7 +335,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		{ "ToolTip", "The character's current power level during gameplay" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower = { "CurrentPower", nullptr, (EPropertyFlags)0x0040000000020021, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialCharacter, CurrentPower), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower = { "CurrentPower", "OnRep_CurrentPower", (EPropertyFlags)0x0040000100020021, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialCharacter, CurrentPower), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CollectionSphereRadius_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -279,6 +346,26 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CollectionSphereRadius = { "CollectionSphereRadius", nullptr, (EPropertyFlags)0x0040000000020035, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialCharacter, CollectionSphereRadius), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CollectionSphereRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CollectionSphereRadius_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_SpeedFactor_MetaData[] = {
+		{ "BlueprintProtected", "true" },
+		{ "Category", "Power" },
+		{ "Comment", "// Multiplier for controlling current speed depending on power level\n" },
+		{ "ModuleRelativePath", "NMPTutorialCharacter.h" },
+		{ "ToolTip", "Multiplier for controlling current speed depending on power level" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_SpeedFactor = { "SpeedFactor", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialCharacter, SpeedFactor), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_SpeedFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_SpeedFactor_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseSpeed_MetaData[] = {
+		{ "BlueprintProtected", "true" },
+		{ "Category", "Power" },
+		{ "Comment", "// Speed when power level is zero\n" },
+		{ "ModuleRelativePath", "NMPTutorialCharacter.h" },
+		{ "ToolTip", "Speed when power level is zero" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseSpeed = { "BaseSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialCharacter, BaseSpeed), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_InitialPower_MetaData[] = {
 		{ "BlueprintProtected", "true" },
@@ -343,6 +430,8 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANMPTutorialCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CurrentPower,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_CollectionSphereRadius,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_SpeedFactor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_InitialPower,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialCharacter_Statics::NewProp_BaseTurnRate,
@@ -377,7 +466,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANMPTutorialCharacter, 3493682313);
+	IMPLEMENT_CLASS(ANMPTutorialCharacter, 1415939813);
 	template<> NMPTUTORIAL_API UClass* StaticClass<ANMPTutorialCharacter>()
 	{
 		return ANMPTutorialCharacter::StaticClass();

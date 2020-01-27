@@ -1,6 +1,50 @@
-﻿  Cleaning NMPTutorialEditor and UnrealHeaderTool binaries...
-  Creating makefile for NMPTutorialEditor (no existing makefile)
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial).
+  Creating makefile for NMPTutorialEditor (config setting changed)
   Parsing headers for NMPTutorialEditor
-    Running UnrealHeaderTool "C:\Projetos\Unreal\MPTutorial\NMPTutorial\NMPTutorial.uproject" "C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\NMPTutorialEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-C:/Projetos/Unreal/MPTutorial/NMPTutorial/Source/NMPTutorial/Pickup.h(56): error : Unknown function specifier 'Unreilable'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(49,5): error MSB3073: O comando ""C:\Program Files\Epic Games\UE_4.24\Engine\Build\BatchFiles\Rebuild.bat" NMPTutorialEditor Win64 Development -Project="C:\Projetos\Unreal\MPTutorial\NMPTutorial\NMPTutorial.uproject" -WaitMutex -FromMsBuild" foi encerrado com o código -1.
+    Running UnrealHeaderTool "C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\NMPTutorial.uproject" "C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\NMPTutorialEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for NMPTutorialEditor in 6,9975996 seconds
+  Building NMPTutorialEditor...
+  Using Visual Studio 2019 14.24.28314 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 16 actions with 8 processes...
+    [1/16] SharedPCH.Engine.ShadowErrors.cpp
+    [2/16] NMPTutorial.init.gen.cpp
+    [3/16] BatteryPickup.gen.cpp
+    [4/16] Pickup.gen.cpp
+    [5/16] Pickup.cpp
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\Pickup.cpp(18): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\Pickup.cpp(38): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\Pickup.cpp(57): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+    [6/16] NMPTutorialGameMode.gen.cpp
+    [7/16] NMPTutorialCharacter.gen.cpp
+    [8/16] NMPTutorialGameMode.cpp
+    [9/16] NMPTutorial.cpp
+    [10/16] BatteryPickup.cpp
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\BatteryPickup.cpp(10): warning C4996: 'AActor::bReplicateMovement': This member will be made private. Please use IsReplicatingMovement or SetReplicatingMovement. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(194): note: consulte a declara��o de 'AActor::bReplicateMovement'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\BatteryPickup.cpp(38): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+    [11/16] SpawnVolume.gen.cpp
+    [12/16] NMPTutorialCharacter.cpp
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorialCharacter.cpp(54): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/SceneComponent.h(666): note: consulte a declara��o de 'USceneComponent::AttachTo'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorialCharacter.cpp(120): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\NMPTutorialCharacter.cpp(171): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+    [13/16] SpawnVolume.cpp
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(16): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(63): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(71): warning C4996: 'AActor::Instigator': This member will be made private. Please use GetInstigator or SetInstigator. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(635): note: consulte a declara��o de 'AActor::Instigator'
+    [14/16] UE4Editor-NMPTutorial.lib
+       Criando biblioteca C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial.lib e objeto C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial.exp
+    [15/16] UE4Editor-NMPTutorial.dll
+       Criando biblioteca C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial.suppressed.lib e objeto C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial.suppressed.exp
+    [16/16] NMPTutorialEditor.target
+  Total time in Parallel executor: 27,82 seconds
+  Total execution time: 37,29 seconds

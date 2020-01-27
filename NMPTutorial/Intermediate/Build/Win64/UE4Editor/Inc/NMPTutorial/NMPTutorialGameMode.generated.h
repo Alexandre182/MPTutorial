@@ -14,8 +14,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define NMPTUTORIAL_NMPTutorialGameMode_generated_h
 
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_SPARSE_DATA
-#define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_RPC_WRAPPERS
-#define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetDecayRate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetDecayRate(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetDecayRate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetDecayRate(); \
+		P_NATIVE_END; \
+	}
+
+
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANMPTutorialGameMode(); \
@@ -58,7 +78,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPTutorialGameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANMPTutorialGameMode)
 
 
-#define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_PRIVATE_PROPERTY_OFFSET
+#define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PowerDrainDelay() { return STRUCT_OFFSET(ANMPTutorialGameMode, PowerDrainDelay); } \
+	FORCEINLINE static uint32 __PPO__DecayRate() { return STRUCT_OFFSET(ANMPTutorialGameMode, DecayRate); }
+
+
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_9_PROLOG
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -1,9 +1,9 @@
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Source\NMPTutorial/NMPTutorialCharacter.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial/NMPTutorialCharacter.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-C:\Projetos\Unreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\NMPTutorialCharacter.generated.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\NMPTutorialCharacter.generated.h

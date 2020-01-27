@@ -18,6 +18,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual bool ServerCollectPickups_Validate(); \
 	virtual void ServerCollectPickups_Implementation(); \
  \
+	DECLARE_FUNCTION(execOnRep_CurrentPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnRep_CurrentPower(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execServerCollectPickups) \
 	{ \
 		P_FINISH; \
@@ -68,6 +76,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool ServerCollectPickups_Validate(); \
 	virtual void ServerCollectPickups_Implementation(); \
+ \
+	DECLARE_FUNCTION(execOnRep_CurrentPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnRep_CurrentPower(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execServerCollectPickups) \
 	{ \
@@ -165,6 +181,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPTutorialCharacter); \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ANMPTutorialCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__CollectionSphere() { return STRUCT_OFFSET(ANMPTutorialCharacter, CollectionSphere); } \
 	FORCEINLINE static uint32 __PPO__InitialPower() { return STRUCT_OFFSET(ANMPTutorialCharacter, InitialPower); } \
+	FORCEINLINE static uint32 __PPO__BaseSpeed() { return STRUCT_OFFSET(ANMPTutorialCharacter, BaseSpeed); } \
+	FORCEINLINE static uint32 __PPO__SpeedFactor() { return STRUCT_OFFSET(ANMPTutorialCharacter, SpeedFactor); } \
 	FORCEINLINE static uint32 __PPO__CollectionSphereRadius() { return STRUCT_OFFSET(ANMPTutorialCharacter, CollectionSphereRadius); } \
 	FORCEINLINE static uint32 __PPO__CurrentPower() { return STRUCT_OFFSET(ANMPTutorialCharacter, CurrentPower); }
 

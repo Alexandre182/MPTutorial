@@ -59,6 +59,10 @@ ANMPTutorialCharacter::ANMPTutorialCharacter()
 	InitialPower = 2000.0f;
 	CurrentPower = InitialPower;
 
+	// Base values for controlling movement speed
+	BaseSpeed = 10.0f;
+	SpeedFactor = 0.75f;
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
@@ -108,6 +112,15 @@ void ANMPTutorialCharacter::CollectPickups()
 {
 	// Ask the server to collect pickups
 	ServerCollectPickups();
+}
+
+
+
+void ANMPTutorialCharacter::OnRep_CurrentPower()
+{
+
+	PowerChangeEffect();
+
 }
 
 bool ANMPTutorialCharacter::ServerCollectPickups_Validate()
@@ -172,6 +185,11 @@ void ANMPTutorialCharacter::UpdatePower(float DeltaPower)
 	{
 		// increase (or decrease) current power
 		CurrentPower += DeltaPower;
+		// Set movement speed based on power level
+		GetCharacterMovement()->MaxWalkSpeed = BaseSpeed + SpeedFactor * CurrentPower;
+
+		// Fake the rep notify (Listen server does not get the RepNotify automatically)
+		OnRep_CurrentPower();
 	}
 }
 
