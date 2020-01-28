@@ -16,6 +16,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_SPARSE_DATA
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetPowerToWinMultiplier) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetPowerToWinMultiplier(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetDecayRate) \
 	{ \
 		P_FINISH; \
@@ -26,6 +34,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetPowerToWinMultiplier) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetPowerToWinMultiplier(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetDecayRate) \
 	{ \
@@ -80,7 +96,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPTutorialGameMode); \
 
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__PowerDrainDelay() { return STRUCT_OFFSET(ANMPTutorialGameMode, PowerDrainDelay); } \
-	FORCEINLINE static uint32 __PPO__DecayRate() { return STRUCT_OFFSET(ANMPTutorialGameMode, DecayRate); }
+	FORCEINLINE static uint32 __PPO__DecayRate() { return STRUCT_OFFSET(ANMPTutorialGameMode, DecayRate); } \
+	FORCEINLINE static uint32 __PPO__PowerToWinMultiplier() { return STRUCT_OFFSET(ANMPTutorialGameMode, PowerToWinMultiplier); }
 
 
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialGameMode_h_9_PROLOG

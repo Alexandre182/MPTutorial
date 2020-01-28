@@ -72,4 +72,20 @@
       <Filter>Source\NMPTutorial</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\NMPTutorial\NMPGameHUD.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\NMPTutorial\NMPGameState.h">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\NMPTutorial\NMPGameHUD.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NMPTutorial\NMPGameState.cpp">
+      <Filter>Source\NMPTutorial</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

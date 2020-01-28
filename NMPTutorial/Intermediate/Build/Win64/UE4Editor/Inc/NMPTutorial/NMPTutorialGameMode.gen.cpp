@@ -18,12 +18,14 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_NMPTutorial();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialGameMode_GetDecayRate();
+	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier();
 // End Cross Module References
 	void ANMPTutorialGameMode::StaticRegisterNativesANMPTutorialGameMode()
 	{
 		UClass* Class = ANMPTutorialGameMode::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetDecayRate", &ANMPTutorialGameMode::execGetDecayRate },
+			{ "GetPowerToWinMultiplier", &ANMPTutorialGameMode::execGetPowerToWinMultiplier },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -62,6 +64,41 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics
+	{
+		struct NMPTutorialGameMode_eventGetPowerToWinMultiplier_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(NMPTutorialGameMode_eventGetPowerToWinMultiplier_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Power" },
+		{ "Comment", "// Access the power level required to win the game\n" },
+		{ "ModuleRelativePath", "NMPTutorialGameMode.h" },
+		{ "ToolTip", "Access the power level required to win the game" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANMPTutorialGameMode, nullptr, "GetPowerToWinMultiplier", nullptr, nullptr, sizeof(NMPTutorialGameMode_eventGetPowerToWinMultiplier_Parms), Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ANMPTutorialGameMode_NoRegister()
 	{
 		return ANMPTutorialGameMode::StaticClass();
@@ -73,6 +110,10 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PowerToWinMultiplier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_PowerToWinMultiplier;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DecayRate_MetaData[];
 #endif
@@ -91,6 +132,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ANMPTutorialGameMode_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ANMPTutorialGameMode_GetDecayRate, "GetDecayRate" }, // 3192279133
+		{ &Z_Construct_UFunction_ANMPTutorialGameMode_GetPowerToWinMultiplier, "GetPowerToWinMultiplier" }, // 2542515188
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialGameMode_Statics::Class_MetaDataParams[] = {
@@ -100,6 +142,16 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerToWinMultiplier_MetaData[] = {
+		{ "BlueprintProtected", "true" },
+		{ "Category", "Power" },
+		{ "Comment", "// The power level needed to win the game\n" },
+		{ "ModuleRelativePath", "NMPTutorialGameMode.h" },
+		{ "ToolTip", "The power level needed to win the game" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerToWinMultiplier = { "PowerToWinMultiplier", nullptr, (EPropertyFlags)0x0020080000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialGameMode, PowerToWinMultiplier), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerToWinMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerToWinMultiplier_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_DecayRate_MetaData[] = {
 		{ "BlueprintProtected", "true" },
@@ -120,6 +172,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerDrainDelay = { "PowerDrainDelay", nullptr, (EPropertyFlags)0x0020080000010015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPTutorialGameMode, PowerDrainDelay), METADATA_PARAMS(Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerDrainDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerDrainDelay_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANMPTutorialGameMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerToWinMultiplier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_DecayRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPTutorialGameMode_Statics::NewProp_PowerDrainDelay,
 	};
@@ -150,7 +203,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANMPTutorialGameMode, 1960280881);
+	IMPLEMENT_CLASS(ANMPTutorialGameMode, 527575134);
 	template<> NMPTUTORIAL_API UClass* StaticClass<ANMPTutorialGameMode>()
 	{
 		return ANMPTutorialGameMode::StaticClass();

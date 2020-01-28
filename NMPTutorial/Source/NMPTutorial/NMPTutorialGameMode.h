@@ -22,6 +22,10 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Power")
 	float GetDecayRate();
 
+	// Access the power level required to win the game
+	UFUNCTION(BlueprintPure, Category = "Power")
+	float GetPowerToWinMultiplier();
+
 protected:
 
 	// How many times per second to update characters power and check game rules
@@ -35,6 +39,10 @@ protected:
 	// The rate at which characters lose power (% of InitialPower per second)
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
 	float DecayRate;
+
+	// The power level needed to win the game
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
+	float PowerToWinMultiplier;
 
 private:
 

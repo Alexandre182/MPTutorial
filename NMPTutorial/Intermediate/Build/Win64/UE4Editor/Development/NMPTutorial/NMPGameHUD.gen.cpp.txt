@@ -1,0 +1,10 @@
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\Definitions.NMPTutorial.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial/NMPGameHUD.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Inc\NMPTutorial\NMPGameHUD.generated.h
