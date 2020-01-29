@@ -13,10 +13,46 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NMPTUTORIAL_NMPGameState_generated_h
 
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_SPARSE_DATA
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_RPC_WRAPPERS
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_INCLASS_NO_PURE_DECLS \
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_SPARSE_DATA
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnRep_CurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnRep_CurrentState(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TEnumAsByte<EBatteryPlayState>*)Z_Param__Result=P_THIS->GetCurrentState(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnRep_CurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnRep_CurrentState(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TEnumAsByte<EBatteryPlayState>*)Z_Param__Result=P_THIS->GetCurrentState(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANMPGameState(); \
 	friend struct Z_Construct_UClass_ANMPGameState_Statics; \
@@ -25,7 +61,7 @@ public: \
 	DECLARE_SERIALIZER(ANMPGameState)
 
 
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_INCLASS \
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesANMPGameState(); \
 	friend struct Z_Construct_UClass_ANMPGameState_Statics; \
@@ -34,7 +70,7 @@ public: \
 	DECLARE_SERIALIZER(ANMPGameState)
 
 
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_STANDARD_CONSTRUCTORS \
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ANMPGameState(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANMPGameState) \
@@ -47,7 +83,7 @@ private: \
 public:
 
 
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_ENHANCED_CONSTRUCTORS \
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANMPGameState(ANMPGameState&&); \
@@ -58,28 +94,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameState); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANMPGameState)
 
 
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_PRIVATE_PROPERTY_OFFSET
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_12_PROLOG
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_GENERATED_BODY_LEGACY \
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CurrentState() { return STRUCT_OFFSET(ANMPGameState, CurrentState); }
+
+
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_20_PROLOG
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_PRIVATE_PROPERTY_OFFSET \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_SPARSE_DATA \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_RPC_WRAPPERS \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_INCLASS \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_STANDARD_CONSTRUCTORS \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_PRIVATE_PROPERTY_OFFSET \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_SPARSE_DATA \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_RPC_WRAPPERS \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_INCLASS \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_GENERATED_BODY \
+#define NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_PRIVATE_PROPERTY_OFFSET \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_SPARSE_DATA \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_INCLASS_NO_PURE_DECLS \
-	NMPTutorial_Source_NMPTutorial_NMPGameState_h_15_ENHANCED_CONSTRUCTORS \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_PRIVATE_PROPERTY_OFFSET \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_SPARSE_DATA \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_INCLASS_NO_PURE_DECLS \
+	NMPTutorial_Source_NMPTutorial_NMPGameState_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -90,4 +129,9 @@ template<> NMPTUTORIAL_API UClass* StaticClass<class ANMPGameState>();
 #define CURRENT_FILE_ID NMPTutorial_Source_NMPTutorial_NMPGameState_h
 
 
+#define FOREACH_ENUM_EBATTERYPLAYSTATE(op) \
+	op(EPlaying) \
+	op(EGameOver) \
+	op(EWon) \
+	op(EUnknown) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

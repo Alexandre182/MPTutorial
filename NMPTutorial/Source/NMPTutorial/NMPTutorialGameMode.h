@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "NMPGameState.h"
 #include "NMPTutorialGameMode.generated.h"
 
 UCLASS(minimalapi)
@@ -44,10 +45,19 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
 	float PowerToWinMultiplier;
 
+	// Track the number of players who have run out of energy and been eliminated from the game.
+	int32 DeadPlayerCount;
+
 private:
 
 	// Drains power from characters and update gameplay
 	void DrainPowerOverTime();
+
+	// Track all the spawn volumes in the level
+	TArray<class ASpawnVolume*> SpawnVolumeActors;
+
+	// Handle any function calls for when the game transitions between states
+	void HandleNewState(EBatteryPlayState NewState);
 
 };
 

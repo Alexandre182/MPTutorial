@@ -17,6 +17,15 @@ struct FVector;
 #define NMPTutorial_Source_NMPTutorial_SpawnVolume_h_12_SPARSE_DATA
 #define NMPTutorial_Source_NMPTutorial_SpawnVolume_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSetSpawningActive) \
+	{ \
+		P_GET_UBOOL(Z_Param_bShouldSpawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetSpawningActive(Z_Param_bShouldSpawn); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetRandomPointVolume) \
 	{ \
 		P_FINISH; \
@@ -27,6 +36,15 @@ struct FVector;
 
 
 #define NMPTutorial_Source_NMPTutorial_SpawnVolume_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetSpawningActive) \
+	{ \
+		P_GET_UBOOL(Z_Param_bShouldSpawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetSpawningActive(Z_Param_bShouldSpawn); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetRandomPointVolume) \
 	{ \

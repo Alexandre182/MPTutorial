@@ -6,7 +6,8 @@
 
 ANMPGameState::ANMPGameState()
 {
-
+	// Set default state when state is not currently known
+	CurrentState = EBatteryPlayState::EUnknown;
 }
 
 void ANMPGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -14,4 +15,23 @@ void ANMPGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(ANMPGameState, PowerToWin);
+	DOREPLIFETIME(ANMPGameState, CurrentState);
+}
+
+EBatteryPlayState ANMPGameState::GetCurrentState() const
+{
+	return CurrentState;
+}
+
+void ANMPGameState::SetCurrentState(EBatteryPlayState NewState)
+{
+	if (Role == ROLE_Authority)
+	{
+		CurrentState = NewState;
+	}
+}
+
+void ANMPGameState::OnRep_CurrentState()
+{
+
 }

@@ -30,10 +30,6 @@ void ASpawnVolume::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	// Set the timer to start spawning pickups
-	SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
-	GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
-
 }
 
 
@@ -55,6 +51,23 @@ FVector ASpawnVolume::GetRandomPointVolume()
 	}
 
 	return FVector();
+}
+
+void ASpawnVolume::SetSpawningActive(bool bShouldSpawn)
+{
+	if (Role == ROLE_Authority)
+	{
+		if (bShouldSpawn)
+		{
+			// Set the timer to start spawning pickups
+			SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
+			GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
+		}
+		else
+		{
+			GetWorldTimerManager().ClearTimer(SpawnTimer);
+		}
+	}
 }
 
 void ASpawnVolume::SpawnPickup()
@@ -83,8 +96,7 @@ void ASpawnVolume::SpawnPickup()
 			APickup* const SpawnedPickup = World->SpawnActor<APickup>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
 			
 			// Delay for a bit before spawning the next pickup
-			SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
-			GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
+			SetSpawningActive(true);
 
 		}
 	}

@@ -6,6 +6,8 @@
 #include "Engine/World.h"
 #include "GameFramework/HUD.h"
 #include "NMPGameState.h"
+#include "SpawnVolume.h"
+#include "Kismet/GameplayStatics.h"
 
 ANMPTutorialGameMode::ANMPTutorialGameMode()
 {
@@ -17,7 +19,7 @@ ANMPTutorialGameMode::ANMPTutorialGameMode()
 	}
 
 	// Set the type of HUD used in the game
-	static ConstructorHelpers::FClassFinder<AHUD> PlayerHUDClass(TEXT("/Game/Blueprints/NMPGameHUD_BP.NMPGameHUD_BP"));
+	static ConstructorHelpers::FClassFinder<AHUD> PlayerHUDClass(TEXT("/Game/Blueprints/NMPGameHUD_BP"));
 	if (PlayerHUDClass.Class != NULL)
 	{
 		HUDClass = PlayerHUDClass.Class;
@@ -35,6 +37,9 @@ ANMPTutorialGameMode::ANMPTutorialGameMode()
 	// Set base value for the power multiplier
 	PowerToWinMultiplier = 1.25f;
 
+	// Reset stats
+	DeadPlayerCount = 0;
+
 }
 
 void ANMPTutorialGameMode::BeginPlay()
@@ -45,6 +50,24 @@ void ANMPTutorialGameMode::BeginPlay()
 	check(World);
 	ANMPGameState* MyGameState = Cast<ANMPGameState>(GameState);
 	check(MyGameState);
+
+	// Reset stats
+	DeadPlayerCount = 0;
+
+	// Gather up all the spawn volumes and store them for later
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(World, ASpawnVolume::StaticClass(), FoundActors);
+	for (auto Actor : FoundActors)
+	{
+		if (ASpawnVolume* TestSpawnVol = Cast<ASpawnVolume>(Actor))
+		{
+			// Add the volume to the array and ensure it only exists in the array once.
+			SpawnVolumeActors.AddUnique(TestSpawnVol);
+		}
+	}
+
+	// Transitioning the game to the playing state
+	HandleNewState(EBatteryPlayState::EPlaying);
 
 	// Go through all the characters in the game
 	for (FConstControllerIterator It = World->GetControllerIterator(); It; ++It)
@@ -75,6 +98,8 @@ void ANMPTutorialGameMode::DrainPowerOverTime()
 	// Access the world to get to the players
 	UWorld* World = GetWorld();
 	check(World);
+	ANMPGameState* MyGameState = Cast<ANMPGameState>(GameState);
+	check(MyGameState);
 
 	// Go through all the characters in the game
 	for (FConstControllerIterator It = World->GetControllerIterator(); It; ++It)
@@ -83,12 +108,74 @@ void ANMPTutorialGameMode::DrainPowerOverTime()
 		{
 			if (ANMPTutorialCharacter* BatteryCharacter = Cast<ANMPTutorialCharacter>(PlayerController->GetPawn()))
 			{
-				if (BatteryCharacter->GetCurrentPower() > 0)
+				if (BatteryCharacter->GetCurrentPower() > MyGameState->PowerToWin)
+				{
+					HandleNewState(EBatteryPlayState::EWon);
+				}
+				else if (BatteryCharacter->GetCurrentPower() > 0)
 				{
 					BatteryCharacter->UpdatePower(-PowerDrainDelay * DecayRate * (BatteryCharacter->GetInitialPower()));
+				}
+				else
+				{
+					// Player died
+					BatteryCharacter->DetachFromControllerPendingDestroy();
+
+					//See if this is the last player to die, and end the game if so
+					++DeadPlayerCount;
+
+					if (DeadPlayerCount >= GetNumPlayers())
+					{
+						HandleNewState(EBatteryPlayState::EGameOver);
+					}
 				}
 			}
 		}
 	}
 
+}
+
+void ANMPTutorialGameMode::HandleNewState(EBatteryPlayState NewState)
+{
+	// Access the world to get to the players
+	UWorld* World = GetWorld();
+	check(World);
+	ANMPGameState* MyGameState = Cast<ANMPGameState>(GameState);
+	check(MyGameState);
+
+	// Only transition if this is actually a new state
+	if (NewState != MyGameState->GetCurrentState())
+	{
+		// Update the state, so clients know about the transition
+		MyGameState->SetCurrentState(NewState);
+
+		switch (NewState)
+		{
+		case EBatteryPlayState::EPlaying:
+			// Activate the spawn volumes
+			for (ASpawnVolume* SpawnVol : SpawnVolumeActors)
+			{
+				SpawnVol->SetSpawningActive(true);
+			}
+			break;
+		case EBatteryPlayState::EGameOver:
+			// Deactivate the spawn volumes
+			for (ASpawnVolume* SpawnVol : SpawnVolumeActors)
+			{
+				SpawnVol->SetSpawningActive(false);
+			}
+			break;
+		case EBatteryPlayState::EWon:
+			// Deactivate the spawn volumes
+			for (ASpawnVolume* SpawnVol : SpawnVolumeActors)
+			{
+				SpawnVol->SetSpawningActive(false);
+			}
+			break;
+		case EBatteryPlayState::EUnknown:
+			break;
+		default:
+			break;
+		}
+	}
 }

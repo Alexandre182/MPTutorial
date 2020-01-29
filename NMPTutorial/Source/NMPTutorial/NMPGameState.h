@@ -6,6 +6,14 @@
 #include "GameFramework/GameStateBase.h"
 #include "NMPGameState.generated.h"
 
+UENUM(BlueprintType)
+enum EBatteryPlayState
+{
+    EPlaying,
+    EGameOver,
+    EWon,
+    EUnknown
+};
 /**
  * 
  */
@@ -24,5 +32,20 @@ public:
     UPROPERTY(Replicated, BlueprintReadOnly, Category = "Power")
     float PowerToWin;
 
+    // Returns the current state of gameplay
+    UFUNCTION(BlueprintPure, Category = "Power")
+    EBatteryPlayState GetCurrentState() const;
+
+    // Transition the game to a new play state.
+    void SetCurrentState(EBatteryPlayState NewState);
+    
+    // Rep Notify fired on clients to allow for client-side changes based on changes in gameplay state.
+    UFUNCTION()
+    void OnRep_CurrentState();
+
+private:
+    // Track the current playing state
+    UPROPERTY(ReplicatedUsing = OnRep_CurrentState)
+    TEnumAsByte<enum EBatteryPlayState> CurrentState;
 
 };
