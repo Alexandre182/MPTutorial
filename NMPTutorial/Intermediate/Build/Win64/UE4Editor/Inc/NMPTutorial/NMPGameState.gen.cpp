@@ -162,6 +162,10 @@ void EmptyLinkFunctionForGeneratedCodeNMPGameState() {}
 #endif
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_CurrentState;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WinningPlayerName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_WinningPlayerName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PowerToWin_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_PowerToWin;
@@ -195,6 +199,15 @@ void EmptyLinkFunctionForGeneratedCodeNMPGameState() {}
 #endif
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ANMPGameState_Statics::NewProp_CurrentState = { "CurrentState", "OnRep_CurrentState", (EPropertyFlags)0x0040000100000020, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPGameState, CurrentState), Z_Construct_UEnum_NMPTutorial_EBatteryPlayState, METADATA_PARAMS(Z_Construct_UClass_ANMPGameState_Statics::NewProp_CurrentState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPGameState_Statics::NewProp_CurrentState_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPGameState_Statics::NewProp_WinningPlayerName_MetaData[] = {
+		{ "Category", "Power" },
+		{ "Comment", "// The name of the player who won the game\n" },
+		{ "ModuleRelativePath", "NMPGameState.h" },
+		{ "ToolTip", "The name of the player who won the game" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ANMPGameState_Statics::NewProp_WinningPlayerName = { "WinningPlayerName", nullptr, (EPropertyFlags)0x0010000000000024, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPGameState, WinningPlayerName), METADATA_PARAMS(Z_Construct_UClass_ANMPGameState_Statics::NewProp_WinningPlayerName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPGameState_Statics::NewProp_WinningPlayerName_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANMPGameState_Statics::NewProp_PowerToWin_MetaData[] = {
 		{ "Category", "Power" },
 		{ "Comment", "// Track the power level required to win the game\n" },
@@ -205,6 +218,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPGameState() {}
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANMPGameState_Statics::NewProp_PowerToWin = { "PowerToWin", nullptr, (EPropertyFlags)0x0010000000000034, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANMPGameState, PowerToWin), METADATA_PARAMS(Z_Construct_UClass_ANMPGameState_Statics::NewProp_PowerToWin_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANMPGameState_Statics::NewProp_PowerToWin_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANMPGameState_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPGameState_Statics::NewProp_CurrentState,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPGameState_Statics::NewProp_WinningPlayerName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANMPGameState_Statics::NewProp_PowerToWin,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANMPGameState_Statics::StaticCppClassTypeInfo = {
@@ -234,7 +248,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPGameState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANMPGameState, 3012535987);
+	IMPLEMENT_CLASS(ANMPGameState, 2963637510);
 	template<> NMPTUTORIAL_API UClass* StaticClass<ANMPGameState>()
 	{
 		return ANMPGameState::StaticClass();

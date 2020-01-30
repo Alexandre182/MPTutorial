@@ -44,7 +44,7 @@ ANMPTutorialGameMode::ANMPTutorialGameMode()
 
 void ANMPTutorialGameMode::BeginPlay()
 {
-	GetWorldTimerManager().SetTimer(PowerDrainTimer, this, &ANMPTutorialGameMode::DrainPowerOverTime, PowerDrainDelay, true);
+	Super::BeginPlay();
 
 	UWorld* World = GetWorld();
 	check(World);
@@ -110,6 +110,7 @@ void ANMPTutorialGameMode::DrainPowerOverTime()
 			{
 				if (BatteryCharacter->GetCurrentPower() > MyGameState->PowerToWin)
 				{
+					MyGameState->WinningPlayerName = BatteryCharacter->GetName();
 					HandleNewState(EBatteryPlayState::EWon);
 				}
 				else if (BatteryCharacter->GetCurrentPower() > 0)
@@ -119,7 +120,7 @@ void ANMPTutorialGameMode::DrainPowerOverTime()
 				else
 				{
 					// Player died
-					BatteryCharacter->DetachFromControllerPendingDestroy();
+					BatteryCharacter->OnPlayerDeath();
 
 					//See if this is the last player to die, and end the game if so
 					++DeadPlayerCount;
@@ -157,6 +158,7 @@ void ANMPTutorialGameMode::HandleNewState(EBatteryPlayState NewState)
 			{
 				SpawnVol->SetSpawningActive(true);
 			}
+			GetWorldTimerManager().SetTimer(PowerDrainTimer, this, &ANMPTutorialGameMode::DrainPowerOverTime, PowerDrainDelay, true);
 			break;
 		case EBatteryPlayState::EGameOver:
 			// Deactivate the spawn volumes
@@ -164,6 +166,7 @@ void ANMPTutorialGameMode::HandleNewState(EBatteryPlayState NewState)
 			{
 				SpawnVol->SetSpawningActive(false);
 			}
+			GetWorldTimerManager().ClearTimer(PowerDrainTimer);
 			break;
 		case EBatteryPlayState::EWon:
 			// Deactivate the spawn volumes
@@ -171,6 +174,7 @@ void ANMPTutorialGameMode::HandleNewState(EBatteryPlayState NewState)
 			{
 				SpawnVol->SetSpawningActive(false);
 			}
+			GetWorldTimerManager().ClearTimer(PowerDrainTimer);
 			break;
 		case EBatteryPlayState::EUnknown:
 			break;

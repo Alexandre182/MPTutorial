@@ -1,27 +1,15 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial).
   Parsing headers for NMPTutorialEditor
     Running UnrealHeaderTool "C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\NMPTutorial.uproject" "C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\NMPTutorialEditor\Development\NMPTutorialEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for NMPTutorialEditor in 7,3185244 seconds
+  Reflection code generated for NMPTutorialEditor in 7,1060273 seconds
   Building NMPTutorialEditor...
   Using Visual Studio 2019 14.24.28314 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 8 actions with 8 processes...
-    [1/8] NMPTutorial.init.gen.cpp
-    [2/8] SpawnVolume.gen.cpp
-    [3/8] NMPTutorialGameMode.gen.cpp
-    [4/8] SpawnVolume.cpp
-C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(16): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
-C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(58): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
-C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(76): warning C4996: 'AActor::Role': This member will be made private. Please use GetLocalRole or SetRole. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(534): note: consulte a declara��o de 'AActor::Role'
-C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Source\NMPTutorial\SpawnVolume.cpp(84): warning C4996: 'AActor::Instigator': This member will be made private. Please use GetInstigator or SetInstigator. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-    C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Actor.h(635): note: consulte a declara��o de 'AActor::Instigator'
-    [5/8] NMPTutorialGameMode.cpp
-    [6/8] UE4Editor-NMPTutorial-0019.lib
-       Criando biblioteca C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0019.lib e objeto C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0019.exp
-    [7/8] UE4Editor-NMPTutorial-0019.dll
-       Criando biblioteca C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0019.suppressed.lib e objeto C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0019.suppressed.exp
-    [8/8] NMPTutorialEditor.target
-  Total time in Parallel executor: 2,42 seconds
-  Total execution time: 10,73 seconds
+  Building 4 actions with 8 processes...
+    [1/4] NMPTutorialGameMode.cpp
+    [2/4] UE4Editor-NMPTutorial-0028.lib
+       Criando biblioteca C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0028.lib e objeto C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0028.exp
+    [3/4] UE4Editor-NMPTutorial-0028.dll
+       Criando biblioteca C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0028.suppressed.lib e objeto C:\Projetos\Unreal\MPTutorialUnreal\MPTutorial\NMPTutorial\Intermediate\Build\Win64\UE4Editor\Development\NMPTutorial\UE4Editor-NMPTutorial-0028.suppressed.exp
+    [4/4] NMPTutorialEditor.target
+  Total time in Parallel executor: 1,94 seconds
+  Total execution time: 9,98 seconds

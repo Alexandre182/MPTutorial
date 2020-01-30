@@ -17,6 +17,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define NMPTutorial_Source_NMPTutorial_NMPTutorialCharacter_h_12_RPC_WRAPPERS \
 	virtual bool ServerCollectPickups_Validate(); \
 	virtual void ServerCollectPickups_Implementation(); \
+	virtual void OnPlayerDeath_Implementation(); \
  \
 	DECLARE_FUNCTION(execOnRep_CurrentPower) \
 	{ \
@@ -44,6 +45,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->CollectPickups(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnPlayerDeath) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnPlayerDeath_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -103,6 +112,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->CollectPickups(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnPlayerDeath) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnPlayerDeath_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \

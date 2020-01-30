@@ -12,6 +12,7 @@
 #include "Net/UnrealNetwork.h"
 #include "Pickup.h"
 #include "BatteryPickup.h"
+#include "Components/SkeletalMeshComponent.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ANMPTutorialCharacter
@@ -191,6 +192,35 @@ void ANMPTutorialCharacter::UpdatePower(float DeltaPower)
 		// Fake the rep notify (Listen server does not get the RepNotify automatically)
 		OnRep_CurrentPower();
 	}
+}
+
+void ANMPTutorialCharacter::OnPlayerDeath_Implementation()
+{
+	// Disconnect controller from Pawn
+	DetachFromControllerPendingDestroy();
+
+	if (GetMesh())
+	{
+		static FName CollisionProfileName(TEXT("Ragdoll"));
+		GetMesh()->SetCollisionProfileName(CollisionProfileName);
+	}
+	SetActorEnableCollision(true);
+
+	// Ragdoll (init physics)
+	GetMesh()->SetAllBodiesSimulatePhysics(true);
+	GetMesh()->SetSimulatePhysics(true);
+	GetMesh()->WakeAllRigidBodies();
+	GetMesh()->bBlendPhysics = true;
+
+	// Disable movement
+	GetCharacterMovement()->StopMovementImmediately();
+	GetCharacterMovement()->DisableMovement();
+	GetCharacterMovement()->SetComponentTickEnabled(false);
+
+	// Disable collisions on the capsule
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	GetCapsuleComponent()->SetCollisionResponseToAllChannels(ECR_Ignore);
+
 }
 
 void ANMPTutorialCharacter::OnResetVR()

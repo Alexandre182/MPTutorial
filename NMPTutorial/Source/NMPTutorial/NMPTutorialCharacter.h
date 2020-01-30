@@ -51,6 +51,10 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "Power")
 	void UpdatePower(float DeltaPower);
 
+	// Shut down pawn and ragdoll it on all clients
+	UFUNCTION(NetMulticast, Reliable)
+	void OnPlayerDeath();
+	virtual void OnPlayerDeath_Implementation();
 
 protected:
 

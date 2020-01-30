@@ -43,6 +43,10 @@ public:
     UFUNCTION()
     void OnRep_CurrentState();
 
+    // The name of the player who won the game
+    UPROPERTY(Replicated, BlueprintReadWrite, Category = "Power")
+    FString WinningPlayerName;
+
 private:
     // Track the current playing state
     UPROPERTY(ReplicatedUsing = OnRep_CurrentState)

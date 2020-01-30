@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_CollectPickups();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_GetCurrentPower();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_GetInitialPower();
+	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect();
 	NMPTUTORIAL_API UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_ServerCollectPickups();
@@ -28,6 +29,11 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
+	static FName NAME_ANMPTutorialCharacter_OnPlayerDeath = FName(TEXT("OnPlayerDeath"));
+	void ANMPTutorialCharacter::OnPlayerDeath()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ANMPTutorialCharacter_OnPlayerDeath),NULL);
+	}
 	static FName NAME_ANMPTutorialCharacter_PowerChangeEffect = FName(TEXT("PowerChangeEffect"));
 	void ANMPTutorialCharacter::PowerChangeEffect()
 	{
@@ -45,6 +51,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 			{ "CollectPickups", &ANMPTutorialCharacter::execCollectPickups },
 			{ "GetCurrentPower", &ANMPTutorialCharacter::execGetCurrentPower },
 			{ "GetInitialPower", &ANMPTutorialCharacter::execGetInitialPower },
+			{ "OnPlayerDeath", &ANMPTutorialCharacter::execOnPlayerDeath },
 			{ "OnRep_CurrentPower", &ANMPTutorialCharacter::execOnRep_CurrentPower },
 			{ "ServerCollectPickups", &ANMPTutorialCharacter::execServerCollectPickups },
 			{ "UpdatePower", &ANMPTutorialCharacter::execUpdatePower },
@@ -141,6 +148,30 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANMPTutorialCharacter_GetInitialPower_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// Shut down pawn and ragdoll it on all clients\n" },
+		{ "ModuleRelativePath", "NMPTutorialCharacter.h" },
+		{ "ToolTip", "Shut down pawn and ragdoll it on all clients" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANMPTutorialCharacter, nullptr, "OnPlayerDeath", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00024CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -315,6 +346,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_CollectPickups, "CollectPickups" }, // 3825582223
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_GetCurrentPower, "GetCurrentPower" }, // 3536522533
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_GetInitialPower, "GetInitialPower" }, // 3986854378
+		{ &Z_Construct_UFunction_ANMPTutorialCharacter_OnPlayerDeath, "OnPlayerDeath" }, // 53812400
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_OnRep_CurrentPower, "OnRep_CurrentPower" }, // 666358721
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_PowerChangeEffect, "PowerChangeEffect" }, // 4015322028
 		{ &Z_Construct_UFunction_ANMPTutorialCharacter_ServerCollectPickups, "ServerCollectPickups" }, // 3381308434
@@ -466,7 +498,7 @@ void EmptyLinkFunctionForGeneratedCodeNMPTutorialCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANMPTutorialCharacter, 1415939813);
+	IMPLEMENT_CLASS(ANMPTutorialCharacter, 1090921044);
 	template<> NMPTUTORIAL_API UClass* StaticClass<ANMPTutorialCharacter>()
 	{
 		return ANMPTutorialCharacter::StaticClass();

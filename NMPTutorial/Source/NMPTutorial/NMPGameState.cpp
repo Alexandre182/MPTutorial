@@ -15,7 +15,8 @@ void ANMPGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(ANMPGameState, PowerToWin);
-	DOREPLIFETIME(ANMPGameState, CurrentState);
+	DOREPLIFETIME(ANMPGameState, CurrentState)
+    DOREPLIFETIME(ANMPGameState, WinningPlayerName);
 }
 
 EBatteryPlayState ANMPGameState::GetCurrentState() const
